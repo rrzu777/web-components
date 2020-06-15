@@ -1,0 +1,38 @@
+.svg-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 8px;
+
+  & > * {
+    fill: #D8D8D8;
+  }
+
+  &:hover:not(.svg-icon--no-hover),
+  &:active:not(.svg-icon--no-hover),
+  &--selected {
+    > * {
+      fill: #026CB6;
+    }
+  }
+
+  &--selected {
+    cursor: initial;
+  }
+
+  &--without-fill {
+
+    > * {
+      fill: none;
+    }
+
+    &:hover:not(.svg-icon--no-hover),
+    &:active:not(.svg-icon--no-hover),
+    &--selected {
+      > * {
+        fill: none;
+      }
+    }
+
+  }
+}
