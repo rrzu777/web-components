@@ -20,7 +20,7 @@ export class Icon {
     @Prop() classes: string = ''
     
     render() {
-        const classes = `svg-icon svg-icon-${this.svg} ${this.classes}`
+        const classes = `svg-icon svg-icon--${this.svg} ${this.classes}`
         return (
             svgs[this.svg]
             ? (

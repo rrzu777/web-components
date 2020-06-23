@@ -11,7 +11,25 @@
 </head>
 <body>
   <arch-loader></arch-loader>
-  <arch-icon svg="hamburger" classes='svg-icon--selected'></arch-icon>
   <arch-icon svg="gridview"></arch-icon>
+  <arch-icon svg="hamburger"></arch-icon>
+  <div id='app'></div>
+
+  <script>
+    const app = document.getElementById('app')
+    const networksObj = JSON.stringify({
+      "website": "www.website.com",
+      "facebook": "www.facebook.com",
+      "twitter": "www.twitter.com",
+      "pinterest": "www.pinterest.com",
+      "instagram": "www.instagram.com",
+      "email": "www.email.com"
+    })
+    const archIcon = document.createElement('arch-social')
+    archIcon.networks = networksObj
+    archIcon.insights = { 'data-insights-label': "new_landing", 'data-insights-value': 1234 }
+    archIcon.withText = true
+    document.body.insertAdjacentElement('beforeend', archIcon)
+  </script>
 </body>
 </html>

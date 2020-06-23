@@ -1,0 +1,90 @@
+arch-social {
+  display: flex;
+}
+
+.social-network {
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50px;
+
+    span {
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: capitalize;
+      margin-top: 4px;
+      color: #303030;
+    }
+  }
+
+  &__link {
+    height: 30px;
+    width: 30px;
+    background: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    span {
+      text-transform: capitalize;
+    }
+    
+    .svg-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      
+      > * {
+        fill: #2f302f; 
+      }
+    }
+
+    &:hover,
+    &:active {
+
+      .svg-icon {
+
+        &--facebook {
+          > * {
+            fill: #3b5998;
+          }
+        }
+
+        &--twitter {
+          > * {
+            fill: #56a5e4;
+          }
+        }
+
+        &--pinterest {
+          > * {
+            fill: #be2b27;
+          }
+        }
+
+        &--email {
+          > * {
+            fill: #36648a;
+          }
+        }
+
+        &--instagram {
+          > * {
+            fill: #d069a1;
+          }
+        }
+
+        &--website {
+          > * {
+            fill: #36648a;
+          }
+        }
+      }
+    }
+  }
+}

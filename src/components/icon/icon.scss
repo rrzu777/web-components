@@ -8,8 +8,8 @@
     fill: #D8D8D8;
   }
 
-  &:hover:not(.svg-icon--no-hover),
-  &:active:not(.svg-icon--no-hover),
+  &:hover:not(.svg-icon--without-hover),
+  &:active:not(.svg-icon--without-hover),
   &--selected {
     > * {
       fill: #026CB6;

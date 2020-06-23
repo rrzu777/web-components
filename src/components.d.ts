@@ -18,6 +18,11 @@ export namespace Components {
     }
     interface ArchLoader {
     }
+    interface ArchSocial {
+        "insights": object;
+        "networks": string;
+        "withText": boolean;
+    }
 }
 declare global {
     interface HTMLArchIconElement extends Components.ArchIcon, HTMLStencilElement {
@@ -32,9 +37,16 @@ declare global {
         prototype: HTMLArchLoaderElement;
         new (): HTMLArchLoaderElement;
     };
+    interface HTMLArchSocialElement extends Components.ArchSocial, HTMLStencilElement {
+    }
+    var HTMLArchSocialElement: {
+        prototype: HTMLArchSocialElement;
+        new (): HTMLArchSocialElement;
+    };
     interface HTMLElementTagNameMap {
         "arch-icon": HTMLArchIconElement;
         "arch-loader": HTMLArchLoaderElement;
+        "arch-social": HTMLArchSocialElement;
     }
 }
 declare namespace LocalJSX {
@@ -50,9 +62,15 @@ declare namespace LocalJSX {
     }
     interface ArchLoader {
     }
+    interface ArchSocial {
+        "insights"?: object;
+        "networks"?: string;
+        "withText"?: boolean;
+    }
     interface IntrinsicElements {
         "arch-icon": ArchIcon;
         "arch-loader": ArchLoader;
+        "arch-social": ArchSocial;
     }
 }
 export { LocalJSX as JSX };
@@ -61,6 +79,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "arch-icon": LocalJSX.ArchIcon & JSXBase.HTMLAttributes<HTMLArchIconElement>;
             "arch-loader": LocalJSX.ArchLoader & JSXBase.HTMLAttributes<HTMLArchLoaderElement>;
+            "arch-social": LocalJSX.ArchSocial & JSXBase.HTMLAttributes<HTMLArchSocialElement>;
         }
     }
 }

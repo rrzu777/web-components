@@ -13,6 +13,19 @@
 | `svg`     | `svg`     | The svg icon name                                                                                                                                                                                     | `string` | `undefined` |
 
 
+## Dependencies
+
+### Used by
+
+ - [arch-social](../social-network)
+
+### Graph
+```mermaid
+graph TD;
+  arch-social --> arch-icon
+  style arch-icon fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
